@@ -1,13 +1,20 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-title>devices</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">devices</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-tabs>
+    <ion-tab-bar slot="top">
+      <ion-tab-button tab="linked">
+        <ion-icon name="link-outline"></ion-icon> Linked
+        <ion-badge class="headerCountbadge">143</ion-badge>
+      </ion-tab-button>
+      <ion-tab-button tab="unlinked">
+        <ion-icon name="unlink-outline"></ion-icon> Unlinked
+        <ion-badge class="headerCountbadge">543</ion-badge>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
 </ion-content>

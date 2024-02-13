@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-inventory',
@@ -12,4 +12,31 @@ export class InventoryPage implements OnInit {
   ngOnInit() {
   }
 
+  @ViewChild('revenue') revenue: any;
+  @ViewChild('duration') duration: any;
+
+  isOpen = false;
+  openit = false;
+
+  revenuetype(e: Event) {
+    this.revenue.event = e;
+    this.openit = true;
+  }
+  defaultduration(e: Event) {
+    this.duration.event = e;
+    this.isOpen = true;
+  }
+
+  openitdismissbtn() {
+    this.openit = false;
+  }
+  openitsubmitbtn() {
+
+  }
+  isopendismiss() {
+    this.isOpen = false;
+  }
+  isopensubmit() {
+
+  }
 }

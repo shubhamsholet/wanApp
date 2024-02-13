@@ -4,10 +4,15 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">playlists</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-tabs>
+    <ion-tab-bar slot="top">
+      <ion-tab-button tab="master-playlist"> Master Playlist
+        <ion-badge class="headerCountbadge">13</ion-badge>
+      </ion-tab-button>
+      <ion-tab-button tab="child-playlist"> Child Playlist
+        <ion-badge class="headerCountbadge">54</ion-badge>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
 </ion-content>

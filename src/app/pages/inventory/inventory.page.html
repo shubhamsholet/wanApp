@@ -2,6 +2,141 @@
   <ion-toolbar>
     <ion-title>inventory</ion-title>
   </ion-toolbar>
+  <ion-toolbar>
+    <ion-row>
+      <ion-col size="2">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>Total Slots</ion-card-subtitle>
+            <ion-card-title>21312</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      <ion-col size="2">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>Used Slots</ion-card-subtitle>
+            <ion-card-title>0</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      <ion-col size="2">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>Revenue</ion-card-subtitle>
+            <ion-card-title>21312</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      <ion-col size="2">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>Remaining Slots</ion-card-subtitle>
+            <ion-card-title>312</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      <ion-col size="2">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>Revenue Type</ion-card-subtitle>
+            <ion-card-title>
+              <ion-button fill="outline" (click)="revenuetype($event)">In slot</ion-button>
+              <ion-popover #revenue [isOpen]="openit" (didDismiss)="openit = false">
+                <ng-template>
+                  <ion-header class="ion-padding">
+                    Revenue Type
+                  </ion-header>
+                  <ion-content class="ion-padding">
+                    <ion-list>
+                      <ion-radio-group value="strawberries">
+                        <ion-item lines="none">
+                          <ion-label>In slot</ion-label>
+                          <ion-radio slot="start" value="slot"></ion-radio>
+                        </ion-item>
+                        <ion-item lines="none">
+                          <ion-label>Total</ion-label>
+                          <ion-radio slot="start" value="total"></ion-radio>
+                        </ion-item>
+                      </ion-radio-group>
+                    </ion-list>
+                  </ion-content>
+                  <ion-footer class="ion-padding">
+                    <ion-button slot="end" (click)="openitdismissbtn()">
+                      Cancel
+                    </ion-button>
+                    <ion-button slot="end" (click)="openitsubmitbtn()">
+                      OK
+                    </ion-button>
+                  </ion-footer>
+                </ng-template>
+              </ion-popover>
+            </ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      <ion-col size="2">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>Default Duration</ion-card-subtitle>
+            <ion-card-title>
+              <ion-button fill="outline" (click)="defaultduration($event)">Last 7 days</ion-button>
+              <ion-popover #duration [isOpen]="isOpen" (didDismiss)="isOpen = false">
+                <ng-template>
+                  <ion-header class="ion-padding">
+                    Default Duration
+                  </ion-header>
+                  <ion-content class="ion-padding">
+                    <ion-list>
+                      <ion-radio-group value="strawberries">
+                        <ion-item lines="none">
+                          <ion-label>Yesterday</ion-label>
+                          <ion-radio slot="start" value="slot"></ion-radio>
+                        </ion-item>
+                        <ion-item lines="none">
+                          <ion-label>last 3 days</ion-label>
+                          <ion-radio slot="start" value="last 3 days"></ion-radio>
+                        </ion-item>
+                        <ion-item lines="none">
+                          <ion-label>last 7 days</ion-label>
+                          <ion-radio slot="start" value="last 7 days"></ion-radio>
+                        </ion-item>
+                        <ion-item lines="none">
+                          <ion-label>last 15 days</ion-label>
+                          <ion-radio slot="start" value="last 15 days"></ion-radio>
+                        </ion-item>
+                        <ion-item lines="none">
+                          <ion-label>this month</ion-label>
+                          <ion-radio slot="start" value="this month"></ion-radio>
+                        </ion-item>
+                      </ion-radio-group>
+                    </ion-list>
+                  </ion-content>
+                  <ion-footer class="ion-padding">
+                    <ion-button slot="end" (click)="isopendismiss()">
+                      Cancel
+                    </ion-button>
+                    <ion-button slot="end" (click)="isopensubmit()">
+                      OK
+                    </ion-button>
+                  </ion-footer>
+                </ng-template>
+              </ion-popover>
+            </ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+  <ion-toolbar class="tabs-header">
+    <ion-row class="ion-padding-horizontal">
+      <ion-col size="6">Device(Location)</ion-col>
+      <ion-col size="1">Total Slots</ion-col>
+      <ion-col size="1">Used Slots </ion-col>
+      <ion-col size="1">Remaining Slots</ion-col>
+      <ion-col size="3">Device Log</ion-col>
+    </ion-row>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
