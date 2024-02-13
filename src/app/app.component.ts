@@ -17,8 +17,10 @@ export class AppComponent {
     { title: 'Playout Certificate', url: '/playout', icon: 'ribbon' },
     { title: 'Users', url: '/users', icon: 'people' },
     { title: 'Profile', url: '/profile', icon: 'person' },
+    { title: 'Logout', url: ' /profile', icon: 'log-out' },
 
   ];
   // public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
   constructor() { }
+
 }

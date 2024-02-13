@@ -1,13 +1,74 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>profile</ion-title>
+    <ion-title>My Profile</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">profile</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <form>
+    <ion-row class="ion-padding">
+      <ion-col size="6">
+        <ion-item class="ion-no-padding">
+          <ion-label position="floating">Name</ion-label>
+          <ion-input placeholder="Enter Name"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="6">
+        <ion-item class="ion-no-padding">
+          <ion-label position="floating"> Email</ion-label>
+          <ion-input placeholder="Enter Email"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="6">
+        <ion-item class="ion-no-padding">
+          <ion-label position="floating">Phone number</ion-label>
+          <ion-input placeholder="Enter Phone number"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="6">
+        <ion-item class="ion-no-padding">
+          <ion-label position="floating">Address</ion-label>
+          <ion-input placeholder="Enter Address"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12">
+        <ion-item class="ion-no-padding">
+          <ion-label position="floating">Region</ion-label>
+          <ion-input placeholder="Enter Region"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12">
+        <ion-item lines="none" class="ion-no-padding">
+          <ion-checkbox slot="start"></ion-checkbox>
+          <ion-label>Change password</ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size="4">
+        <ion-item class="ion-no-padding">
+          <ion-label position="floating">current password</ion-label>
+          <ion-input placeholder="Enter current password"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="4">
+        <ion-item class="ion-no-padding">
+          <ion-label position="floating">new password</ion-label>
+          <ion-input placeholder="Enter new password"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="4">
+        <ion-item class="ion-no-padding">
+          <ion-label position="floating">confirm password</ion-label>
+          <ion-input placeholder="Enter confirm password"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12">
+        <ion-button color="warning" expand="full">
+          Submit <ion-icon name="chevron-forward-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
+
+    </ion-row>
+
+
+  </form>
 </ion-content>

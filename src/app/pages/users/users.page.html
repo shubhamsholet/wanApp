@@ -4,10 +4,29 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">users</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-tabs>
+    <ion-tab-bar slot="top">
+      <ion-tab-button tab="client">
+        Client
+        <ion-badge class="headerCountbadge">143</ion-badge>
+      </ion-tab-button>
+      <ion-tab-button tab="advertiser">
+        Advertiser
+        <ion-badge class="headerCountbadge">543</ion-badge>
+      </ion-tab-button>
+      <ion-tab-button tab="agency">
+        Agency
+        <ion-badge class="headerCountbadge">543</ion-badge>
+      </ion-tab-button>
+      <ion-tab-button tab="manager">
+        Manager
+        <ion-badge class="headerCountbadge">543</ion-badge>
+      </ion-tab-button>
+      <ion-tab-button tab="admin">
+        Admin
+        <ion-badge class="headerCountbadge">543</ion-badge>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
 </ion-content>
