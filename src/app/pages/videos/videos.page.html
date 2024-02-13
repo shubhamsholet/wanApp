@@ -1,13 +1,30 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>videos</ion-title>
+    <ion-searchbar slot="end" value=""></ion-searchbar>
+    <ion-title>videos
+      <ion-icon name="play-circle-outline"></ion-icon>
+      <ion-badge class="headerCountbadge">112</ion-badge>
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">videos</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-tabs>
+    <ion-tab-bar slot="top">
+      <ion-tab-button tab="general">
+        General
+        <ion-badge class="headerCountbadge">143</ion-badge>
+      </ion-tab-button>
+      <ion-tab-button tab="doctor">
+        Doctor
+        <ion-badge class="headerCountbadge">543</ion-badge>
+      </ion-tab-button>
+      <ion-tab-button tab="ads">
+        Ads
+        <ion-badge class="headerCountbadge">132</ion-badge>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+
+
 </ion-content>

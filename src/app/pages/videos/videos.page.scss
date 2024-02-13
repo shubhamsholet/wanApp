@@ -1,0 +1,15 @@
+ion-header {
+    box-shadow: none;
+
+    ion-searchbar {
+        width: 25%;
+    }
+}
+
+ion-tabs {
+    ion-tab-button {
+        font-size: 18px;
+    }
+}
+
+::ng-deep {}
