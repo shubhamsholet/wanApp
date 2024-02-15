@@ -1,0 +1,65 @@
+ion-content {
+    --background: #96a0cb;
+    position: relative;
+}
+
+
+.login-card {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.login-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    flex-direction: column;
+
+    .logo {
+        max-width: 100%;
+        padding: 2rem 2rem 0;
+
+        img {
+            width: 100px;
+            height: auto;
+        }
+    }
+}
+
+
+
+ion-card {
+    width: 320px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: unset;
+}
+
+ion-card-content {
+    padding: 16px;
+    position: unset;
+
+}
+
+
+ion-card-title {
+    width: fit-content;
+    margin: auto;
+    font-size: var(--font-22pt);
+    font-weight: 500;
+    color: var(--ion-color-primary) !important;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 1rem 0 0;
+}
+
+ion-card-title span {
+    font-size: var(--font-13pt);
+    font-weight: 400;
+    color: var(--grey-txt) !important;
+}

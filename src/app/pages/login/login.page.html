@@ -1,0 +1,34 @@
+<ion-content class="overflow-hidden">
+  <div class="login-card overflow-hidden">
+    <div class="login-card-container">
+      <div class="logo">
+        <img src="../../../assets/ss-logo.webp" alt="logo" />
+      </div>
+      <ion-card>
+        <ion-card-header class="ion-no-padding">
+          <ion-card-title class="ion-text-center font-semibold">
+            Welcome back!
+            <span>Login to your account</span>
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <form>
+            <ion-input label="Email/Username" label-placement="floating" fill="outline" placeholder="Email/Username"
+              required></ion-input>
+
+            <ion-input class="ion-margin-vertical" type="password" label="password" label-placement="floating"
+              fill="outline" placeholder="Password" required></ion-input>
+
+            <div class="login-links">
+              <ion-button class="w-100" mdTooltip="Login" type="submit" expand="block">
+                Login
+                <!-- <ion-icon class="ion-padding-start" name="log-in-outline"></ion-icon> -->
+              </ion-button>
+            </div>
+            <a expand="full" class="">Forgot Password?</a>
+          </form>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>
