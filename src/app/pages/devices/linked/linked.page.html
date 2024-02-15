@@ -9,10 +9,27 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">linked</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding-vertical">
+  <div *ngFor="let device of divicesdetails">
+    <ion-row class="ion-padding-horizontal">
+      <ion-col size="5" class="d-flex  gap-2">
+        <ion-icon color="warning" size="large" name="desktop-outline"></ion-icon>
+        <p>{{device.divicename}}</p>
+      </ion-col>
+      <ion-col size="3" class="d-flex ion-align-items-center gap-2">
+        <ion-icon size="large" name="person"></ion-icon>
+        <div>
+          <p>{{device.divicename}}</p>
+          <p>{{device.location}}</p>
+        </div>
+      </ion-col>
+      <ion-col size="3">
+        <p>{{device.divicename}} playlist</p>
+        <p>videos ({{device.videoscount}})</p>
+      </ion-col>
+      <ion-col size="1">
+        <ion-icon size="large" color="danger" *ngIf="device.edit" name="create-outline"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </div>
 </ion-content>
