@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-general',
@@ -17,6 +18,7 @@ export class GeneralPage implements OnInit {
       count: 4,
       delete: false,
       edit: true,
+      id: 1,
     },
     {
       name: '14-ready to move_English.mp4',
@@ -24,6 +26,7 @@ export class GeneralPage implements OnInit {
       count: 434,
       delete: false,
       edit: true,
+      id: 2,
     },
     {
       name: '211 lets play_English.mp4',
@@ -31,6 +34,7 @@ export class GeneralPage implements OnInit {
       count: 45,
       delete: true,
       edit: true,
+      id: 3,
     },
     {
       name: 'messup_English.mp4',
@@ -38,6 +42,7 @@ export class GeneralPage implements OnInit {
       count: 43,
       delete: true,
       edit: false,
+      id: 4,
     },
     {
       name: 'messup_English.mp4',
@@ -45,6 +50,7 @@ export class GeneralPage implements OnInit {
       count: 43,
       delete: true,
       edit: false,
+      id: 5,
     },
     {
       name: 'messup_English.mp4',
@@ -52,9 +58,51 @@ export class GeneralPage implements OnInit {
       count: 43,
       delete: true,
       edit: false,
+      id: 6,
     },
   ]
-  constructor() { }
+
+  constructor(private alertController: AlertController) {
+
+  }
+
+
+  async deleteVideoItem(item: { name: any, id: any }) {
+    const alert = await this.alertController.create({
+      header: 'Do you want to delete this item?',
+      subHeader: item.id,
+      message: 'This is an alert!',
+      buttons: ['OK'],
+    });
+
+    await alert.present();
+  }
+
+
+
+  // async editVideoItem(item: { name: any, id: any }) {
+  //   const alert = await this.alertController.create({
+  //     header: 'Do you want to edit this item?',
+  //     subHeader: item.id,
+  //     message: 'This is an alert!',
+  //     buttons: [
+  //       {
+  //         text: 'Cancel',
+  //         role: 'cancel',
+  //       },
+  //       {
+  //         text: 'OK',
+  //         role: 'confirm',
+  //         handler: () => {
+  //           item.name = 'anil';
+  //         },
+  //       },
+  //     ],
+  //   });
+
+  //   await alert.present();
+  // }
+
 
   ngOnInit() {
     this.totalSeconds = this.generalvideolist.map(video => video.duration);
