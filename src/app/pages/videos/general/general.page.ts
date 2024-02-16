@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { AlertController } from '@ionic/angular';
-
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { AlertController, IonModal } from '@ionic/angular';
+import { OverlayEventDetail } from '@ionic/core/components';
 @Component({
   selector: 'app-general',
   templateUrl: './general.page.html',
@@ -72,11 +72,48 @@ export class GeneralPage implements OnInit {
       header: 'Do you want to delete this item?',
       subHeader: item.id,
       message: 'This is an alert!',
-      buttons: ['OK'],
+      buttons: [
+        {
+          text: 'OK',
+          role: 'confirm',
+          handler: () => {
+            item
+          },
+        },
+      ],
     });
 
     await alert.present();
   }
+
+
+
+  // @ViewChild(IonModal)
+  // modal!: IonModal;
+
+  // message = 'This modal example uses triggers to automatically open a modal when the button is clicked.';
+  // name: string | undefined;
+
+  // cancel() {
+  //   this.modal.dismiss(null, 'cancel');
+  // }
+
+  // confirm() {
+  //   this.modal.dismiss(this.name, 'confirm');
+  // }
+
+  // onWillDismiss(event: Event) {
+  //   const ev = event as CustomEvent<OverlayEventDetail<string>>;
+  //   if (ev.detail.role === 'confirm') {
+  //     this.message = `Hello, ${ev.detail.data}!`;
+  //   }
+  // }
+
+
+
+
+
+
 
 
 

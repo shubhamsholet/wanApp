@@ -7,14 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { GeneralPageRoutingModule } from './general-routing.module';
 
 import { GeneralPage } from './general.page';
+import { ComponentsModule } from "../../../componentsmodule";
 
 @NgModule({
+  declarations: [GeneralPage],
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    GeneralPageRoutingModule
-  ],
-  declarations: [GeneralPage]
+    GeneralPageRoutingModule,
+    ComponentsModule
+  ]
 })
-export class GeneralPageModule {}
+export class GeneralPageModule { }
