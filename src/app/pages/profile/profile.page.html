@@ -39,12 +39,12 @@
       </ion-col>
       <ion-col size="12">
         <ion-item lines="none" class="ion-no-padding">
-          <ion-checkbox slot="start"></ion-checkbox>
+          <ion-checkbox slot="start" name="ischecked" [(ngModel)]="ischecked"></ion-checkbox>
           <ion-label>Change password</ion-label>
         </ion-item>
       </ion-col>
     </ion-row>
-    <ion-row class="ion-padding pt-0">
+    <ion-row class="ion-padding pt-0" *ngIf="ischecked">
       <ion-col size="4">
         <ion-item class="ion-no-padding">
           <ion-label position="floating">current password</ion-label>
@@ -63,14 +63,13 @@
           <ion-input placeholder="Enter confirm password"></ion-input>
         </ion-item>
       </ion-col>
+    </ion-row>
+    <ion-row class="ion-padding">
       <ion-col size="12">
         <ion-button color="warning" expand="full">
           Submit <ion-icon name="chevron-forward-outline"></ion-icon>
         </ion-button>
       </ion-col>
-
     </ion-row>
-
-
   </form>
 </ion-content>
